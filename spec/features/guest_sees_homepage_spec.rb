@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "visits homepage", %Q{
+feature "visits homepage", %{
   As a guest, I want to visit the homepage and see a list of courts
   So that I can decide where to play.
 
