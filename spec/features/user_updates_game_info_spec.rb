@@ -37,10 +37,8 @@ feature "user updates site", %{
 
       click_button "Sign in"
 
-
       visit edit_game_path(edit_game)
       fill_in "Name", with: "bunt"
-
 
       click_button "Update Game"
       expect(page).to have_content "Game updated successfully"
@@ -58,8 +56,6 @@ feature "user updates site", %{
 
       visit edit_game_path(edit_game)
       fill_in "Name", with: ""
-
-
 
       click_button "Update Game"
       expect(page).to have_content "error"
