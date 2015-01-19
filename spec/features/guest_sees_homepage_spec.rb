@@ -14,9 +14,9 @@ feature "visits homepage", %{
 
     game1 = FactoryGirl.create(:game)
     game2 = FactoryGirl.create(:game)
+
     scenario "visits homepage" do
       visit root_path
-
 
       expect(page).to have_content game1.name
       expect(page).to have_content game2.name
