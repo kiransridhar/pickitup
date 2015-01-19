@@ -12,21 +12,21 @@ feature "sees the details of a game", %{
   - [ ] Must see the category of the game (optional)
 
   } do
-    let (:test_game) do
+  let (:test_game) do
       FactoryGirl.create(:game)
-    end
-    scenario "sees the name of the game" do
-      visit game_path(test_game)
+  end
+  scenario "sees the name of the game" do
+    visit game_path(test_game)
 
-      expect(page).to have_content test_game.name
-    end
+    expect(page).to have_content test_game.name
+  end
 
-    scenario "sees the location of the game" do
-      visit game_path(test_game)
+  scenario "sees the location of the game" do
+    visit game_path(test_game)
 
-      expect(page).to have_content test_game.address
-      expect(page).to have_content test_game.city
-      expect(page).to have_content test_game.state
-      expect(page).to have_content test_game.zip
-    end
+    expect(page).to have_content test_game.address
+    expect(page).to have_content test_game.city
+    expect(page).to have_content test_game.state
+    expect(page).to have_content test_game.zip
+  end
 end
