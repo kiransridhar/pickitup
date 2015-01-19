@@ -13,7 +13,7 @@ feature "sees the details of a game", %{
 
   } do
   let (:test_game) do
-      FactoryGirl.create(:game)
+    FactoryGirl.create(:game)
   end
   scenario "sees the name of the game" do
     visit game_path(test_game)
