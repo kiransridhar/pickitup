@@ -32,4 +32,5 @@
 <% if current_user != nil && current_user.id == @game.user_id %>
 
 <%= link_to "Edit", edit_game_path(@game) %>
+<%= link_to 'Delete Game', game_path(@game), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
