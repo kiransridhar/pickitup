@@ -28,11 +28,9 @@ class GamesController < ApplicationController
     redirect_tp games_path
   end
 
-
   private
 
   def game_params
     params.require(:game).permit(:name, :address, :city, :state, :zip)
   end
-
 end
