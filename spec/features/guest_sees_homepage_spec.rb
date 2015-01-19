@@ -14,7 +14,6 @@ feature "visits homepage", %{
 
     game1 = FactoryGirl.create(:game)
     game2 = FactoryGirl.create(:game)
-
     scenario "visits homepage" do
       visit root_path
 

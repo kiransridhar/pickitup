@@ -21,7 +21,6 @@ feature "user creates", %{
       visit new_game_path
       expect(page).to have_content "Create a new game"
 
-
       fill_in "Name", with: game.name
       fill_in "Address", with: game.address
       fill_in "City", with: game.city
