@@ -7,7 +7,7 @@ feature "sees the details of a game", %{
   Acceptance Criteria:
   - [ ] Must see the name of the game
   - [ ] Must see the location of the game
-  - [ ] Must see username that created site
+  - [ ] Must see username that created the game
   - [ ] Must see a photo of the location (optional)
   - [ ] Must see the category of the game (optional)
 
