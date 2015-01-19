@@ -17,7 +17,7 @@ feature "user updates site", %{
 
       visit game_path(edit_game)
 
-      expect(page).to have_content "Edit"
+      expect(page).to have_content(:link_or_button, "Edit")
 
     end
     scenario 'unauthenticated user sees edit button on show page' do
@@ -25,7 +25,7 @@ feature "user updates site", %{
 
       visit game_path(edit_game)
 
-      expect(page).to have_no_content "Edit"
+      expect(page).to have_no_content(:link_or_button, "Edit")
 
     end
     scenario 'authenticated user edits game' do
