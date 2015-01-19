@@ -1,23 +1,35 @@
-<h1> Details</h1>
-<table>
-  <thead>
-    <tr>
-      <th width="100">Name</th>
-      <th width="100">Address</th>
-      <th width="100">City</th>
-      <th width="100">State</th>
-      <th width="100">Zip</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= @game.name %></td>
-      <td>
-        <p>
-          <%= @game.address %>
-          <br>
-          <%= @game.city %>, <%= @game.state %> <%= @game.zip %>
-        </p>
-      </tr>
-    </tbody>
-</table>
+<h1>Game Details</h1>
+
+<div class="row">
+  <div class="large-10 columns">
+    <table class="games">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @game.name %></td>
+          <td>
+            <p>
+              <%= @game.address %>
+              <br>
+              <%= @game.city %>, <%= @game.state %> <%= @game.zip %>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<% if current_user != nil && current_user.id == @game.user_id %>
+
+<%= link_to "Edit", edit_game_path(@game) %>
+<% end %>

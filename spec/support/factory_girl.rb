@@ -10,7 +10,7 @@ FactoryGirl.define do
   end
 
   factory :game do
-    sequence(:name) { |n| "Stanton School Court ##{1}"}
+    sequence(:name) { |n| "Stanton School Court ##{n}"}
     address "50 Wawecus Ave"
     city "Norwich"
     state "MA"
