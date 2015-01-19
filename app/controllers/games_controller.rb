@@ -25,10 +25,12 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @game.destroy
 
-    redirect_tp games_path
+    redirect_to games_path
   end
 
+
   private
+
 
   def game_params
     params.require(:game).permit(:name, :address, :city, :state, :zip)
