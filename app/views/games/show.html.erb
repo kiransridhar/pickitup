@@ -1,0 +1,23 @@
+<h1> Details</h1>
+<table>
+  <thead>
+    <tr>
+      <th width="100">Name</th>
+      <th width="100">Address</th>
+      <th width="100">City</th>
+      <th width="100">State</th>
+      <th width="100">Zip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @game.name %></td>
+      <td>
+        <p>
+          <%= @game.address %>
+          <br>
+          <%= @game.city %>, <%= @game.state %> <%= @game.zip %>
+        </p>
+      </tr>
+    </tbody>
+</table>

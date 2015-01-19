@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :games
   root 'homes#index'
   devise_for :users, controllers: { registrations: "registrations" }
   resources :users, only: [:show, :edit, :put]
