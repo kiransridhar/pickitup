@@ -3,7 +3,7 @@ require "rails_helper"
 feature "user creates", %{
   As a user
   I want to be able to create a game
-  So that I can share it with others
+  So that I can play with others
   } do
 
     scenario "if signed in" do
