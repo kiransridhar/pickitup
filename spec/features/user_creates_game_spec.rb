@@ -21,6 +21,10 @@ feature "user creates", %{
       visit new_game_path
       expect(page).to have_content "Create a new game"
 
+      attach_file("game[image]", File.join(
+      Rails.root, "spec/data/basketball-366x275.jpg")
+      )
+
       fill_in "Name", with: game.name
       fill_in "Address", with: game.address
       fill_in "City", with: game.city
@@ -28,6 +32,8 @@ feature "user creates", %{
       fill_in "Zip", with: game.zip
 
       click_on "Create Game"
+
+
 
       expect(page).to have_content game.name
       expect(page).to have_content game.address

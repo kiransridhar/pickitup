@@ -5,6 +5,7 @@
     <table class="games">
       <thead>
         <tr>
+          <th>Image</th>
           <th>Name</th>
           <th>Address</th>
           <th>City</th>
@@ -14,6 +15,7 @@
       </thead>
       <tbody>
         <tr>
+          <td><%= image_tag(@game.image) %></td>
           <td><%= @game.name %></td>
           <td>
             <p>
