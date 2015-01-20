@@ -1,6 +1,6 @@
 <h1>Games</h1>
 
-<table class="sites">
+<table class="games">
   <thead>
     <tr>
       <th width="100">Name</th>
@@ -11,6 +11,7 @@
     </tr>
   </thead>
   <tbody>
+    <% if @games.present? %>
     <% @games.each do |game| %>
     <tr>
       <td><%= link_to game.name, game_path(game) %></td>
@@ -22,6 +23,9 @@
         </p>
       </td>
     </tr>
+    <% end %>
+    <% else %>
+    <p>No results found</p>
     <% end %>
   </tbody>
 </table>
