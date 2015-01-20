@@ -7,7 +7,7 @@
         <tr>
           <th>Image</th>
           <th>Name</th>
-          <th>Address</th>
+          <th>Street</th>
           <th>City</th>
           <th>State</th>
           <th>Zip</th>
@@ -17,13 +17,10 @@
         <tr>
           <td><%= image_tag(@game.image) %></td>
           <td><%= @game.name %></td>
-          <td>
-            <p>
-              <%= @game.address %>
-              <br>
-              <%= @game.city %>, <%= @game.state %> <%= @game.zip %>
-            </p>
-          </td>
+          <td><%= @game.address %></td>
+          <td><%= @game.city %></td>
+          <td><%= @game.state %></td>
+          <td><%= @game.zip %></td>
         </tr>
       </tbody>
     </table>
