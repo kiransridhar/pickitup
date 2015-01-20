@@ -33,8 +33,6 @@ feature "user creates", %{
 
       click_on "Create Game"
 
-
-
       expect(page).to have_content game.name
       expect(page).to have_content game.address
       expect(page).to have_content game.city
