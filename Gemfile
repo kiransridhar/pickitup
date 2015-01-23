@@ -60,3 +60,4 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'fog'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'geocoder'

@@ -26,12 +26,12 @@
         <li class="has-form">
           <div class="row collapse">
             <%= form_tag games_path, method: :get do %>
-            <div class="large-8 small-9 columns">
-              <%= text_field_tag :query %>
+            <div class="large-7 small-9 columns">
+              <%= text_field_tag :query, nil, placeholder: "Find Local Games" %>
 
             </div>
-            <div class="large-4 small-3 columns">
-              <%= submit_tag "Search Games", { class: "button radius" } %>
+            <div class="large-5 small-3 columns">
+              <%= submit_tag "Enter Zip Code", { class: "button radius" } %>
             </div>
             <% end %>
           </div>
@@ -45,9 +45,10 @@
       <%= value %>
     </div>
   <% end %>
+<div class="container">
 
   <%= yield %>
-
+</div>
   <%= javascript_include_tag 'application' %>
   <%= javascript_tag do %>
     $(function(){
