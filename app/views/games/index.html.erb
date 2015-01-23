@@ -8,6 +8,8 @@
       <th width="100">City</th>
       <th width="100">State</th>
       <th width="100">Zip</th>
+      <th width="100">Tip Off Time</th>
+      <th width="100">Tip Off Date</th>
     </tr>
   </thead>
   <tbody>
@@ -19,13 +21,15 @@
       <td><%= game.city %></td>
       <td><%= game.state %></td>
       <td><%= game.zip %></td>
+      <td><%= game.tip_time %></td>
+      <td><%= game.tip_date %></td>
     </tr>
     <% end %>
     <% else %>
-    <p>No results found</p>
+    <p>No games nearby</p>
     <% end %>
   </tbody>
 </table>
 <% if user_signed_in? %>
-<%= link_to "Create new game", new_game_path %>
+<%= link_to "Create New Game", new_game_path %>
 <% end %>

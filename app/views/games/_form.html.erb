@@ -33,6 +33,14 @@
     <%= f.label :zip %><br/>
     <%= f.text_field :zip %>
   </div>
+  <div class="field">
+    <%= f.label :tip_off_time %><br/>
+    <%= f.text_field :tip_time %>
+  </div>
+  <div class="field">
+    <%= f.label :tip_off_date %><br/>
+    <%= f.text_field :tip_date %>
+  </div>
 
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="form-group">

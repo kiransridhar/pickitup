@@ -1,12 +1,11 @@
 class GamesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   def index
-    if params[:query]
-      @games = Game.search(params[:query])
+    if params[:query].present?
+      @games = Game.near(params[:query], 15)
     else
       @games = Game.all
     end
-    @games = @games.order("name DESC")
   end
 
   def show
@@ -61,8 +60,12 @@ class GamesController < ApplicationController
     :city,
     :state,
     :zip,
+    :tip_time,
+    :tip_date,
     :user_id,
     :image,
+    :tip_time,
+    :tip_date,
     :query)
   end
 end

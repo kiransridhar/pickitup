@@ -19,7 +19,7 @@ feature "user creates", %{
       click_button "Sign in"
 
       visit new_game_path
-      expect(page).to have_content "Create a new game"
+      expect(page).to have_content "Organize a New Game"
 
       attach_file("game[image]", File.join(
       Rails.root, "spec/data/basketball-366x275.jpg")
@@ -72,6 +72,6 @@ feature "user creates", %{
 
       visit games_path
 
-      expect(page).to have_content "Create new game"
+      expect(page).to have_content "Create New Game"
     end
   end

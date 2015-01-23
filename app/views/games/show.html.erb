@@ -1,5 +1,19 @@
+
 <h1>Game Details</h1>
 
+<div class="row">
+  <div class="large-6 large-offset-3 columns">
+    <h2>Find the game here:</h2>
+    <iframe
+    width="303"
+    height="227"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBpNCywq-uxWjQnJICVNxv47n-HJA3AiYI
+    &q=<%= @game.name.split(' ').join('+') %>+<%= @game.city %>+<%= @game.state %>
+    &attribution_source=Google+Maps+Embed+API
+    &attribution_ios_deep_link_id=comgooglemaps://?daddr=<%= @game.name.split(' ').join('+') %>+<%= @game.city %>+<%= @game.state %>">
+  </iframe>
+</div>
 <div class="row">
   <div class="large-10 columns">
     <table class="games">
@@ -11,6 +25,8 @@
           <th>City</th>
           <th>State</th>
           <th>Zip</th>
+          <th>Tip Off Time</th>
+          <th>Tip Off Date</th>
         </tr>
       </thead>
       <tbody>
@@ -21,6 +37,8 @@
           <td><%= @game.city %></td>
           <td><%= @game.state %></td>
           <td><%= @game.zip %></td>
+          <td><%= @game.tip_time %></td>
+          <td><%= @game.tip_date %></td>
         </tr>
       </tbody>
     </table>
