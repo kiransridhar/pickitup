@@ -5,7 +5,6 @@
 #     match = FactoryGirl.create(:game, name: "One on One")
 #     match2 = FactoryGirl.create(:game, name: "One vs Two")
 #     FactoryGirl.create(:game, name: "Ballers")
-# 
 #     visit games_path
 #     fill_in "query", with: "One"
 #     click_button "Search Games"
