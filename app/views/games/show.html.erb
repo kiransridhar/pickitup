@@ -1,9 +1,21 @@
 
-<h1>Game Details</h1>
+<h3 style="color:White;">Court Image</h3>
+
+<% unless @game.image == nil %>
+<div class="row">
+  <div class="large-12 columns">
+    <div id="slider">
+      <%= image_tag @game.image, alt: @game.name %>
+    </div>
+
+    <hr/>
+  </div>
+</div>
+<% end %>
 
 <div class="row">
   <div class="large-6 large-offset-3 columns">
-    <h2>Find the game here:</h2>
+    <h1 style="color:White;">Game Details:</h1>
     <iframe
     width="303"
     height="227"
@@ -14,12 +26,11 @@
     &attribution_ios_deep_link_id=comgooglemaps://?daddr=<%= @game.name.split(' ').join('+') %>+<%= @game.city %>+<%= @game.state %>">
   </iframe>
 </div>
-<div class="row">
-  <div class="large-10 columns">
-    <table class="games">
+<table class="center">
+  <div class="row">
+    <div class="large-10 columns">
       <thead>
         <tr>
-          <th>Image</th>
           <th>Name</th>
           <th>Street</th>
           <th>City</th>
@@ -31,7 +42,6 @@
       </thead>
       <tbody>
         <tr>
-          <td><%= image_tag(@game.image) %></td>
           <td><%= @game.name %></td>
           <td><%= @game.address %></td>
           <td><%= @game.city %></td>
@@ -41,9 +51,9 @@
           <td><%= @game.tip_date %></td>
         </tr>
       </tbody>
-    </table>
+    </div>
   </div>
-</div>
+</table>
 
 
 <% if (current_user != nil && current_user.id == @game.user_id) || (!current_user.nil? && current_user.role == 2) %>

@@ -1,10 +1,21 @@
+h1 {
+  text-align: center;
+  color:white;
+}
+
+
 .container {
-  background: url("/assets/basketball_court_floor_clipart.jpg");
+  background: url("/assets/basketball_court_wood_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   text-align: center;
-  height: 700px;
+  height: 1000px;
 
 
+}
+
+table.center {
+  margin-left:auto;
+  margin-right:auto;
 }

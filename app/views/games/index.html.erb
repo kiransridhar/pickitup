@@ -1,9 +1,10 @@
-<h1>Games</h1>
+<h1 style="color:White;">Welcome to PickitUp!</h1>
+<h3 style="color:White;"> Here are a list of games currently available </h3>
 
-<table class="games">
+<table class="center">
   <thead>
     <tr>
-      <th width="100">Name</th>
+      <th width="150">Name</th>
       <th width="100">Street</th>
       <th width="100">City</th>
       <th width="100">State</th>
@@ -26,10 +27,10 @@
     </tr>
     <% end %>
     <% else %>
-    <p>No games nearby</p>
+    <p style="color:White;">No games nearby</p>
     <% end %>
   </tbody>
 </table>
 <% if user_signed_in? %>
-<%= link_to "Create New Game", new_game_path %>
+<%= link_to "Create New Game", new_game_path, {:style => 'color: #99FFFF'} %>
 <% end %>
